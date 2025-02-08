@@ -50,7 +50,7 @@ RUN /bin/bash -c "bash < <(curl -sL https://raw.githubusercontent.com/axllent/ma
 # RUN apt install texlive-full -y
 
 # Install KWallet
-RUN apt install kwalletmanager -y
+RUN apt install kwalletmanager libpam-kwallet5 -y
 
 # Install XFCE plugin docklike
 RUN add-apt-repository ppa:xubuntu-dev/extras
