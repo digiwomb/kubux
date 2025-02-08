@@ -59,6 +59,8 @@ RUN apt install xfce4-docklike-plugin -y
 
 # Customize XFCE
 COPY ./xfce4/* $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
+RUN mkdir $HOME/.config/autostart
+COPY ./autostart/* $HOME/.config/autostart/
 
 ######### End Customizations ###########
 
