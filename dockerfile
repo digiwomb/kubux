@@ -57,9 +57,8 @@ RUN add-apt-repository ppa:xubuntu-dev/extras
 RUN apt update
 RUN apt install xfce4-docklike-plugin -y
 
-# Set XFCE settings
-RUN rm /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
-COPY ./xfce4/ /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/
+# Customize XFCE
+COPY ./xfce4/* $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 ######### End Customizations ###########
 
